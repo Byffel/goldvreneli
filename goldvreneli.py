@@ -1,4 +1,5 @@
 from _version import __version__
+from pycoingecko import CoinGeckoAPI
 import argparse
 
 def main( ):
@@ -31,7 +32,11 @@ def main( ):
         FUNCTION_MAP[args.command]()
 
 def list_available_currencies():
-    print("list available!")
+    cg = CoinGeckoAPI()    
+    response = cg.get_coins_list()
+
+    for i in response:
+        print(i["name"])
 
 if __name__ == '__main__':
    main()
