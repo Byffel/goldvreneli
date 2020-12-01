@@ -29,11 +29,6 @@ def main( ):
 
     get_price_parser.add_argument("id", help="ID of the crypto currency")
     get_price_parser.add_argument('vs', metavar='vs', help="ID of the (crypto) currency to compare to")
-    
-    #parser_update = subparsers.add_parser("update",
-    #                                    add_help=False,
-    #                                    description="The update parser",
-    #                                    help="update the orbix environment")
 
     args = main_parser.parse_args()
 
