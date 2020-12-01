@@ -36,7 +36,7 @@ def list_available_currencies():
     response = cg.get_coins_list()
 
     for i in response:
-        print(i["name"])
+        print(i["name"] + " (ID: \"" + i["id"] + "\")")
 
 if __name__ == '__main__':
    main()
